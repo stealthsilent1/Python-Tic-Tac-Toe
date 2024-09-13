@@ -1,0 +1,38 @@
+# Tic Tac Toe Screen
+# python
+
+def Board():
+    print (f"""
+    {Currentboard[0]} {Currentboard[1]} {Currentboard[2]} 
+    {Currentboard[3]} {Currentboard[4]} {Currentboard[5]}
+    {Currentboard[6]} {Currentboard[7]} {Currentboard[8]}
+    """)
+
+
+Currentboard = [
+    "1", "2", "3",
+    "4", "5", "6",
+    "7", "8", "9"
+]
+
+
+
+print ("Hello, welcome to tic tac toe, Player X start first. Select A value 1-9")
+x = 0 
+
+while x < 9:
+    x = x + 1
+    Player1choice = int(input("Player 1 input")) - 1
+    Currentboard[Player1choice] = "X"
+    Board()
+    
+    x = x + 1
+    if x > 8:
+        print ("GAME OVER")
+        break
+    
+    Player2choice = int(input("Player 2 input")) - 1
+    Currentboard[Player2choice] = "O"
+    Board()
+    
+    
